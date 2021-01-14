@@ -26,11 +26,11 @@ public class PhoneFormattedTextField: UITextField {
      Default is true.
      */
     public var hasPredictiveInput: Bool {
-        set {
-            formatProxy.hasPredictiveInput = newValue
-        }
         get {
             return formatProxy.hasPredictiveInput
+        }
+        set {
+            formatProxy.hasPredictiveInput = newValue
         }
     }
 
@@ -38,12 +38,12 @@ public class PhoneFormattedTextField: UITextField {
      Prefix for all formats
      */
     public var prefix: String? {
+        get {
+            return formatProxy.prefix
+        }
         set {
             formatProxy.prefix = newValue
             self.text = newValue
-        }
-        get {
-            return formatProxy.prefix
         }
     }
 

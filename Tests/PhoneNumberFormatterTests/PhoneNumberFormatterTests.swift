@@ -9,7 +9,7 @@
 import XCTest
 @testable import PhoneNumberFormatter
 
-class FormatterTests: XCTestCase {
+class PhoneNumberFormatterTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
@@ -152,4 +152,16 @@ class FormatterTests: XCTestCase {
         result = formatter.formatText(text: "+7 (123) 8887", prefix: prefix)
         XCTAssert(result.text == prefix + "+7 (123) 888-88-7", "should format correctly")
     }
+    
+    static var allTests = [
+        ("testShouldFormatByDefault", testShouldFormatByDefault),
+        ("testShouldDetectSpecificFormats", testShouldDetectSpecificFormats),
+        ("testShouldHandleSpecialSymbols", testShouldHandleSpecialSymbols),
+        ("testShouldHandleFormatWithDigitsAtStart", testShouldHandleFormatWithDigitsAtStart),
+        ("testShouldHandleFormatWithDigitsInTheMiddle", testShouldHandleFormatWithDigitsInTheMiddle),
+        ("testShouldCheckPrefix", testShouldCheckPrefix),
+        ("testShouldCheckPrefixAndDifferentFormats", testShouldCheckPrefixAndDifferentFormats),
+        ("testShouldHandleNumberFormatStyles", testShouldHandleNumberFormatStyles),
+        ("testShouldHandlePrefixNumberFormatStyles", testShouldHandlePrefixNumberFormatStyles)
+    ]
 }

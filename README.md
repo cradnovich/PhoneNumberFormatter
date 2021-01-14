@@ -19,6 +19,16 @@ github "Serheo/PhoneNumberFormatter"
 pod "SwiftPhoneNumberFormatter"
 ```
 
+#### Swift Package Manager
+
+Add the 
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/cradnovich/PhoneNumberFormatter.git", from: "1.5")
+]
+```
+
 ## Getting Started
 
 ### Default Format

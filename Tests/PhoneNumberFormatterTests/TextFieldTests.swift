@@ -18,4 +18,7 @@ class TextFieldTests: XCTestCase {
         XCTAssert(textField.text == "+1 (231) 231-23-23", "Should be formatted")
     }
 
+    static var allTests = [
+        ("testShouldSetFormattedText", testShouldSetFormattedText)
+    ]
 }

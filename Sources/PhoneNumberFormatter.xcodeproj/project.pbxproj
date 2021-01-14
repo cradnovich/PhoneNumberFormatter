@@ -22,7 +22,7 @@
 		3F980BEB1F567268001E4E55 /* PhoneNumberFormatter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3FAC92881F49F3D1001EDF79 /* PhoneNumberFormatter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3FAC92921F49F3D1001EDF79 /* PhoneNumberFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FAC92881F49F3D1001EDF79 /* PhoneNumberFormatter.framework */; };
 		3FAC92991F49F3D1001EDF79 /* PhoneNumberFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FAC928B1F49F3D1001EDF79 /* PhoneNumberFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3FC46A781F5C5D8200ADBE5E /* FormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC46A771F5C5D8200ADBE5E /* FormatterTests.swift */; };
+		3FC46A781F5C5D8200ADBE5E /* PhoneNumberFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC46A771F5C5D8200ADBE5E /* PhoneNumberFormatterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +75,7 @@
 		3FAC928C1F49F3D1001EDF79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FAC92911F49F3D1001EDF79 /* PhoneNumberFormatterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhoneNumberFormatterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FAC92981F49F3D1001EDF79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3FC46A771F5C5D8200ADBE5E /* FormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterTests.swift; sourceTree = "<group>"; };
+		3FC46A771F5C5D8200ADBE5E /* PhoneNumberFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberFormatterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +105,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24BC76B725B0C92B00C30C39 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3FAC92951F49F3D1001EDF79 /* PhoneNumberFormatterTests */,
+			);
+			name = Tests;
+			path = ../Tests;
+			sourceTree = SOURCE_ROOT;
+		};
 		3F6329021F5670CC007676FA /* Demo */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,33 +125,13 @@
 				3F63290F1F5670CC007676FA /* Info.plist */,
 			);
 			path = Demo;
-			sourceTree = "<group>";
-		};
-		3F82D2BB1F7747AA004C2D60 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				3F82D2C01F7747AA004C2D60 /* PhoneFormattedTextField.swift */,
-				3F82D2BC1F7747AA004C2D60 /* ConfigRepo */,
-				3F82D2BF1F7747AA004C2D60 /* FormattedTextFieldDelegate.swift */,
-				3F82D2C11F7747AA004C2D60 /* PhoneFormatter.swift */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		3F82D2BC1F7747AA004C2D60 /* ConfigRepo */ = {
-			isa = PBXGroup;
-			children = (
-				3F82D2BD1F7747AA004C2D60 /* ConfigurationRepo.swift */,
-				3F82D2BE1F7747AA004C2D60 /* PhoneFormat.swift */,
-			);
-			path = ConfigRepo;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		3FAC927E1F49F3D0001EDF79 = {
 			isa = PBXGroup;
 			children = (
 				3FAC928A1F49F3D1001EDF79 /* PhoneNumberFormatter */,
-				3FAC92951F49F3D1001EDF79 /* PhoneNumberFormatterTests */,
+				24BC76B725B0C92B00C30C39 /* Tests */,
 				3F6329021F5670CC007676FA /* Demo */,
 				3FAC92891F49F3D1001EDF79 /* Products */,
 			);
@@ -162,8 +151,12 @@
 			isa = PBXGroup;
 			children = (
 				3FAC928B1F49F3D1001EDF79 /* PhoneNumberFormatter.h */,
-				3F82D2BB1F7747AA004C2D60 /* Sources */,
+				3F82D2C01F7747AA004C2D60 /* PhoneFormattedTextField.swift */,
 				3FAC928C1F49F3D1001EDF79 /* Info.plist */,
+				3F82D2C11F7747AA004C2D60 /* PhoneFormatter.swift */,
+				3F82D2BF1F7747AA004C2D60 /* FormattedTextFieldDelegate.swift */,
+				3F82D2BE1F7747AA004C2D60 /* PhoneFormat.swift */,
+				3F82D2BD1F7747AA004C2D60 /* ConfigurationRepo.swift */,
 			);
 			path = PhoneNumberFormatter;
 			sourceTree = "<group>";
@@ -171,7 +164,7 @@
 		3FAC92951F49F3D1001EDF79 /* PhoneNumberFormatterTests */ = {
 			isa = PBXGroup;
 			children = (
-				3FC46A771F5C5D8200ADBE5E /* FormatterTests.swift */,
+				3FC46A771F5C5D8200ADBE5E /* PhoneNumberFormatterTests.swift */,
 				3F4B52311F5CB63700D56C42 /* TextFieldTests.swift */,
 				3FAC92981F49F3D1001EDF79 /* Info.plist */,
 			);
@@ -361,7 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FC46A781F5C5D8200ADBE5E /* FormatterTests.swift in Sources */,
+				3FC46A781F5C5D8200ADBE5E /* PhoneNumberFormatterTests.swift in Sources */,
 				3F4B52321F5CB63700D56C42 /* TextFieldTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -599,7 +592,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = PhoneNumberFormatterTests/Info.plist;
+				INFOPLIST_FILE = ../Tests/PhoneNumberFormatterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shs.PhoneNumberFormatterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -612,7 +605,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = PhoneNumberFormatterTests/Info.plist;
+				INFOPLIST_FILE = ../Tests/PhoneNumberFormatterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shs.PhoneNumberFormatterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
