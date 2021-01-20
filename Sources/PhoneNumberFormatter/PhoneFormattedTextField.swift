@@ -46,6 +46,11 @@ public class PhoneFormattedTextField: UITextField {
             self.text = newValue
         }
     }
+    
+    /**
+     Has a complete phone number been entered?
+     */
+    public private(set) var isComplete = false
 
     public override init(frame: CGRect) {
         config =  ConfigurationRepo()
@@ -116,8 +121,10 @@ public class PhoneFormattedTextField: UITextField {
             if let value = newValue {
                 let result = formatter.formatText(text: value, prefix: prefix)
                 self.text = result.text
+                self.isComplete = result.isComplete
             } else {
                 self.text = ""
+                self.isComplete = false
             }
 
             self.textDidChangeBlock?(self)

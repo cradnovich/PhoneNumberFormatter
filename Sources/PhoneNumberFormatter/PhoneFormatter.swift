@@ -10,9 +10,11 @@ import UIKit
 
 struct PhoneFormatterResult {
     let text: String
+    let isComplete: Bool
 
-    init(text: String) {
+    init(text: String, isComplete: Bool = false) {
         self.text = text
+        self.isComplete = isComplete
     }
 }
 
@@ -76,7 +78,7 @@ final class PhoneFormatter {
 
         let appropriateConfig = getAppropriateConfig(text: cleanNumber, in: config)
         let result = applyFormat(text: cleanNumber, format: appropriateConfig, prefix: prefix)
-        return PhoneFormatterResult(text: result)
+        return PhoneFormatterResult(text: result, isComplete: appropriateConfig.phoneFormat.count == result.count)
     }
 
     func formattedRemove(text: String, range: NSRange) -> String {
