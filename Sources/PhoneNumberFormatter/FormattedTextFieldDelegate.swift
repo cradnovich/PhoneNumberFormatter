@@ -25,6 +25,10 @@ final class FormattedTextFieldDelegate: NSObject, UITextFieldDelegate {
         if let prefix = prefix, range.location < prefix.count {
             return false
         }
+        
+        guard let textField = textField as? PhoneFormattedTextField else {
+            return false
+        }
 
         let resultText = textField.text ?? ""
         let caretPosition = formatter.pushCaretPosition(text: resultText, range: range)
@@ -41,7 +45,8 @@ final class FormattedTextFieldDelegate: NSObject, UITextFieldDelegate {
 
         let result = formatter.formatText(text: newString, prefix: prefix)
         textField.text = result.text
-
+        textField.isComplete = result.isComplete
+        
         if let positionRange = formatter.popCaretPosition(textField: textField,
                                                           range: range,
                                                           caretPosition: caretPosition) {

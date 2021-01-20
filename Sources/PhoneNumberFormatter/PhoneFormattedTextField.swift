@@ -50,7 +50,7 @@ public class PhoneFormattedTextField: UITextField {
     /**
      Has a complete phone number been entered?
      */
-    public private(set) var isComplete = false
+    public internal(set) var isComplete = false
 
     public override init(frame: CGRect) {
         config =  ConfigurationRepo()
