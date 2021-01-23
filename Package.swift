@@ -21,9 +21,16 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "PhoneNumberFormatter",
-            dependencies: []),
+            dependencies: [],
+            exclude: [
+                "Info.plist"
+            ]
+        ),
         .testTarget(
             name: "PhoneNumberFormatterTests",
-            dependencies: ["PhoneNumberFormatter"]),
+            dependencies: ["PhoneNumberFormatter"],
+            exclude: [
+                "Info.plist"
+            ]),
     ]
 )
