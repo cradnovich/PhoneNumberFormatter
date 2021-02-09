@@ -21,7 +21,7 @@ public struct PhoneFormatterResult {
 final public class PhoneFormatter {
 
     let config: ConfigurationRepo
-    init(config: ConfigurationRepo) {
+    public init(config: ConfigurationRepo) {
         self.config = config
     }
 
