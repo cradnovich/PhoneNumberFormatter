@@ -14,17 +14,17 @@ import UIKit
 */
 final public class ConfigurationRepo {
 
-    private var customConfigs: [PhoneFormat] = []
+    private(set) var customConfigs: [PhoneFormat] = []
 
     /**
       Default configuration
      */
     public var defaultConfiguration: PhoneFormat = PhoneFormat(defaultPhoneFormat: "#############")
 
-    init() {
+    public init() {
     }
 
-    init(defaultFormat: PhoneFormat) {
+    public init(defaultFormat: PhoneFormat) {
         self.defaultConfiguration = defaultFormat
     }
 
