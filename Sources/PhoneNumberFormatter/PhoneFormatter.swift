@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct PhoneFormatterResult {
+public struct PhoneFormatterResult {
     let text: String
     let isComplete: Bool
 
@@ -18,7 +18,7 @@ struct PhoneFormatterResult {
     }
 }
 
-final class PhoneFormatter {
+final public class PhoneFormatter {
 
     let config: ConfigurationRepo
     init(config: ConfigurationRepo) {
@@ -35,7 +35,7 @@ final class PhoneFormatter {
         return valuableChars.contains(char) ? true : false
     }
 
-    func digitOnlyString(text: String?) -> String? {
+    public func digitOnlyString(text: String?) -> String? {
         guard let text = text else {
             return nil
         }
@@ -71,7 +71,7 @@ final class PhoneFormatter {
         return repo.getDefaultConfig()
     }
 
-    func formatText(text: String, prefix: String? = nil) -> PhoneFormatterResult {
+    public func formatText(text: String, prefix: String? = nil) -> PhoneFormatterResult {
         let lastPossibleFormat = getAppropriateConfig(text: text, in: config)
 
         let cleanNumber = removeFormatFrom(text: text, format: lastPossibleFormat, prefix: prefix) ?? ""
