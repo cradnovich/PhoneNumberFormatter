@@ -9,7 +9,7 @@
 import UIKit
 
 public struct PhoneFormatterResult {
-    let text: String
+    public let text: String
     let isComplete: Bool
 
     init(text: String, isComplete: Bool = false) {
